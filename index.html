@@ -6,13 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
-      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
     />
 
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <title>theeventsgallery</title>
   </head>
@@ -20,52 +29,63 @@
     <!-- /////navbar////// -->
     <div class="container-fluid">
       <div class="row">
-        <nav class="navbar navbar-expand-lg navbar-light  boderdown">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#"
-              ><img
-                src="./images/Shagun Events Logo.png"
-                class="logo-img"
-                alt="Shagun Events"
-            /></a>
+        <nav class="navbar navbar-expand-lg boderdown">
+          <div class="container-fluid nstyle">
             <button
-              class="navbar-toggler"
+              class="navbar-toggler bg-b"
+              id="hide"
               type="button"
+              onclick="hidelogo()"
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent"
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon"></span>
+              <i class="fas fa-bars fa-2x"></i>
             </button>
             <div
-              class="collapse navbar-collapse  link-items"
+              class="collapse navbar-collapse link-items pstyle"
               id="navbarSupportedContent"
             >
-              <ul class="navbar-nav ms-auto  mb-2 mb-lg-0">
+              <ul class="navbar-nav mb-2 mb-lg-0">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#"
                     >Home</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">About Us</a>
+                  <a class="nav-link" href="#about">About Us</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Our Services</a>
+                  <a class="nav-link" href="#vendor">Our Services</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <a class="navbar-brand kst" href="#"
+                ><img
+                  src="./images/1.png"
+                  class="logo-img"
+                  id="hideme"
+                  alt="Shagun Events"
+              /></a>
+            </div>
+
+            <div
+              class="collapse navbar-collapse link-items mstyle"
+              id="navbarSupportedContent"
+            >
+              <ul class="mb-2 mb-lg-0 navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="gallery.html">Gallery</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Reveiws</a>
+                  <a class="nav-link" href="#faq">FAQ</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Gallery</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Contact us</a>
-                </li>
-               
-                  </ul>
+                  <a class="nav-link" href="contact.html">Contact us</a>
                 </li>
               </ul>
             </div>
@@ -77,527 +97,805 @@
 
     <!-- //////////hero start///// -->
     <section class="home">
-
-        <div class="container-fluid">
-            <div class="row">
-               
-                <div id="carouselExampleDark" class="carousel  slide carousel-fade" id="#home" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
-      <img src="./images/AnaisEvents_WeddingDocumentaryPhoto-Simi-Aneil+-+046.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h1>First slide label</h1>
-        <p>Some representative placeholder content for the first slide.</p>
-      </div>
-    </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="./images/AnaisEvents_WeddingDocumentaryPhoto-Simi-Aneil+-+038.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h1>Second slide label</h1>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="./images/AnaisEvents_WeddingDocumentaryPhoto-Simi-Aneil+-+043.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h1>Third slide label</h1>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon " aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-
+      <div>
+        <div>
+          <div
+            id="carouselExampleDark"
+            class="carousel slide carousel-fade"
+            id="#home"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
             </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img
+                  src="./images/lemeridienjaipur_1625492729008.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h1></h1>
+                  <p></p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img
+                  src="./images/AnaisEvents_WeddingDocumentaryPhoto-Simi-Aneil+-+038.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h1></h1>
+                  <p></p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./images/AnaisEvents_WeddingDocumentaryPhoto-Simi-Aneil+-+043.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h1></h1>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
-
-
+      </div>
     </section>
     <!-- /////////hero end //////// -->
 
     <!-- ///////intro///// -->
-    <section >
-        <div class="container">
-            <div class="row">
-                <div class="about-us" id="about">
-                    <div class="img-div">
-                        <img src="./images/IMG_20200323_235112.jpg" alt="">
-                    </div>
-                    <div class="about-para">
-                      <h1>About us</h1>
-                      <img src="./images/header-img.png" alt="">
-                        <p>Lorem ipsum dolor, sit amet consectetur ad Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero dolore quibusdam ipsa dicta vel natus magnam voluptatem explicabo, reiciendis dignissimos perferendis sequi eos rerum iure adipisci quidem ad laboriosam, ut repudiandae. Sit, dolorem est. Eos.  ipisicing elit. Vitae assumenda libero quis at consequuntur aperiam ratione repellat, eveniet mollitia beatae officia debitis nemo, aliquid cum ipsa perferendis sunt quas corrupti doloribus alias. Esse, soluta expedita.</p>
-                    </div>
-                </div>
+    <section>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="about-us" id="about">
+            <div class="img-div">
+              <img src="./images/IMG_20200323_235112.jpg" alt="" />
             </div>
-
+            <div class="about-para">
+              <h1>About us</h1>
+              <h1 class="border-bottom2"></h1>
+              <!-- <img src="./images/header-img.png d-none" alt="" /> -->
+              <p>
+                A wedding is such a special and intimate celebration; a sweety
+                constructed dream brought to life. It is something you will
+                capture carefully in pictures, talk and laugh about with your
+                friends and family, reminisce about with your children and look
+                back on through the years. We, at Shagun Events, are here to
+                give you the perfect wedding. An experience that will remain
+                etched in the minds of everyone who attends it. With a team
+                passionately dedicated to translating your wishes into reality,
+                we will use our creativity and experience to craft you a wedding
+                as a unique as can be. So breathe, relax, you’ve found us, we’re
+                meant to be, your job is done; we’ll take it from here. All you
+                have to do is soak in every brilliant moment. Let us handle the
+                rest.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- //////intro end///// -->
-
 
     <!-- /////our services//// -->
     <section class="vendor" id="vendor">
       <div class="container">
         <div class="row">
+          <div class="heading1">
+            <h1>Our Services</h1>
+            <h2 class="border-bottom2"></h2>
+          </div>
 
-        
-      <div class="heading1" >
-        <h1>Our Services</h1>
-        <img src="images/header-img.png" alt="" />
-      </div>
+          <div class="box-container">
+            <div class="box">
+              <img
+                src="images/zo_wed_1625400461172_5.jpg"
+                alt="Full wedding management"
+              />
+              <div class="info">
+                <h3>Full wedding management</h3>
+                <p>
+                  We offer full wedding management services as a wedding
+                  planner,including decoration,guest
+                  management,transportation,food and catering,artist and
+                  vendor,gifting and much more,now you only got to think about
+                  when will you have your next event.
+                </p>
+              </div>
+            </div>
 
-      <div class="box-container">
-        <div class="box">
-          <img src="images/AnaisEvents_WeddingDocumentaryPhoto-Simi-Aneil+-+035.jpg" alt="" />
-          <div class="info">
-            <h3>dressing</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam,
-              dolores.
-            </p>
-            
+            <div class="box">
+              <img
+                src="images/live-dhol-performance-show-at-indian-wedding-receptiondd01f76b7f826be783d8ff0000ac5c23.jpg"
+                alt=""
+              />
+              <div class="info">
+                <h3>Entertainment</h3>
+                <p>
+                  Illustrious names or hidden gems - we present you with the
+                  full spectrum! So whether it’s a top DJ for a party that
+                  dances into the next day, live music to serenade your guests
+                  with or an emcee that has you laughing all night, we’ve got
+                  you covered.
+                </p>
+              </div>
+            </div>
+
+            <div class="box">
+              <img src="images/theweddingchamber_1625549527299.jpg" alt="" />
+              <div class="info">
+                <h3>Decor management</h3>
+                <p>
+                  While we spearhead the dialogue forward throughout, we help
+                  you pick the right decorator to convert all your visuals into
+                  reality with the perfect mix of being personalised as well as
+                  gorgeous!
+                </p>
+              </div>
+            </div>
+
+            <div class="box">
+              <img src="images/gyanjeecaterers_1625489028041.jpg" alt="" />
+              <div class="info">
+                <h3>Food & Beverages</h3>
+                <p>
+                  Let your taste buds travel the globe, or find comfort in your
+                  favourite food close to home. We help you curate the menu of
+                  your dreams. We’ll find you the perfect caterer and bartending
+                  company and promise everything will be as smooth butter.
+                </p>
+              </div>
+            </div>
+
+            <div class="box">
+              <img src="images/lemeridienjaipur_1625492729008.jpg" alt="" />
+              <div class="info">
+                <h3>Destination & Venue</h3>
+                <p>
+                  We’ll help you find the places that match your vibe and bring
+                  your vision to life. Whether it’s in your city or outside of
+                  it, point us to it. Then get a drink, let us liaison with
+                  them. All you have to do is show up.
+                </p>
+              </div>
+            </div>
+
+            <div class="box">
+              <img src="images/SquareQuick_202175192846908.jpg" alt="" />
+              <div class="info">
+                <h3>Artist/Vendor management</h3>
+                <p>
+                  Photographers, videographers, choreographers, stylists and
+                  makeup artists: we’ve worked with some of the best in the
+                  industry. We will put you in touch with them and co-ordinate
+                  everything for each function.
+                </p>
+              </div>
+            </div>
+
+            <div class="box">
+              <img src="images/hospitality.jpg" alt="" />
+              <div class="info">
+                <h3>Hospitality and Guest management</h3>
+                <p>
+                  Guest lists, hotel bookings, anything and everything your
+                  guests might need; more things you can forget about, because
+                  we’ll sure remember them. We’ll even craft and send them
+                  RSVPs, reminders and any necessary information to keep them
+                  involved.
+                </p>
+              </div>
+            </div>
+
+            <div class="box">
+              <img src="images/14.jpg" alt="" />
+              <div class="info">
+                <h3>Logistics</h3>
+                <p>
+                  Basically, your wedding needs a game plan. We figure out the
+                  visas, travel, transport and hire a travel agency if needed.
+                  This lays the groundwork for us to build your wedding on
+                </p>
+              </div>
+            </div>
+
+            <div class="box">
+              <img src="images/SquareQuick_20217520541753.jpg" alt="" />
+              <div class="info">
+                <h3>Invitations and Gifting</h3>
+                <p>
+                  We will help you conceptualise your wedding invites, favours
+                  and gifts; things you would be excited to send out. We will
+                  then find the perfect people to create them for you.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="box">
-          <img src="images/AnaisEvents_WeddingDocumentaryPhoto-Simi-Aneil+-+038.jpg" alt="" />
-          <div class="info">
-            <h3>Florist</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam,
-              dolores.
-            </p>
-            
-          </div>
-        </div>
-
-        <div class="box">
-          <img src="images/AnaisEvents_WeddingDocumentaryPhoto-Simi-Aneil+-+042.jpg" alt="" />
-          <div class="info">
-            <h3>wedding cake</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam,
-              dolores.
-            </p>
-            
-          </div>
-        </div>
-
-        <div class="box">
-          <img src="images/AnaisEvents_WeddingDocumentaryPhoto-Simi-Aneil+-+043.jpg" alt="" />
-          <div class="info">
-            <h3>venu and hall</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam,
-              dolores.
-            </p>
-            
-          </div>
-        </div>
-
-        <div class="box">
-          <img src="images/AnaisEvents_WeddingDocumentaryPhoto-Simi-Aneil+-+045.jpg" alt="" />
-          <div class="info">
-            <h3>music and party</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam,
-              dolores.
-            </p>
-            
-          </div>
-        </div>
-
-        <div class="box">
-          <img src="images/Shagun Events (40).png" alt="" />
-          <div class="info">
-            <h3>music and party</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam,
-              dolores.
-            </p>
-            
-          </div>
-        </div>
-
-        <div class="box">
-          <img src="images/Shagun Events (42).png" alt="" />
-          <div class="info">
-            <h3>music and party</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam,
-              dolores.
-            </p>
-            
-          </div>
-        </div>
-
-        <div class="box">
-          <img src="images/Shagun Events (43).png" alt="" />
-          <div class="info">
-            <h3>music and party</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam,
-              dolores.
-            </p>
-            
-          </div>
-        </div>
-
-        <div class="box">
-          <img src="images/AnaisEvents_WeddingDocumentaryPhoto-Simi-Aneil+-+046.jpg" alt="" />
-          <div class="info">
-            <h3>photographer</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam,
-              dolores.
-            </p>
-            
-          </div>
-        </div>
-      </div>
-      </div>
       </div>
     </section>
     <!-- ///////service end////// -->
 
-      <!-- /////faq///// -->
+    <!-- /////faq///// -->
     <section class="faq" id="faq">
-
-    <div class="container">
-      <div class="row">
-
-           <div class="heading1">
-        <h1>Frequently asked Questions</h1>
-        <img src="images/header-img.png" alt="" />
+      <div class="container">
+        <div class="row">
+          <div class="heading1">
+            <h1>Frequently asked Questions</h1>
+            <h2 class="border-bottom2"></h2>
+          </div>
+          <div class="accordion faq-body" id="accordionExample">
+            <div class="accordion-item bg-darkc">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  <h2>Why Shagun Events?</h2>
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <p>
+                    We will reduce your stress considerably during the planning
+                    process and especially on the actual day of your wedding. We
+                    also serve as your creative partner not just overseeing
+                    logistical matters but also providing a wealth of ideas,
+                    insights, opinions, and more. We do all the planning and
+                    legwork. Offer great advice on locations, decorations, ideas
+                    and other services. Take the stress out of your wedding by
+                    shouldering responsibility for all the organization.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-darkc">
+              <h2 class="accordion-header" id="headingSeven">
+                <button
+                  class="accordion-button atitle collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSeven"
+                  aria-expanded="false"
+                  aria-controls="collapseSeven"
+                >
+                  <h2>
+                    We are meeting the wedding expenses ourselves, can we have a
+                    budget wedding?
+                  </h2>
+                </button>
+              </h2>
+              <div
+                id="collapseSeven"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingSeven"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <p>
+                    Yes, of course!There are several options available, Shagun
+                    Events is confident one will be just right for you. Today’s
+                    brides and grooms to be often busy with dual careers and
+                    tight budgets yet wanting to make their wedding day
+                    memorable – we are happy to work within your budget. Ideally
+                    you should begin planning for your wedding 8 to 12 months
+                    ahead of the event. Popular wedding services, venues and
+                    suppliers require to be booked well in advance. However we
+                    recognize that this may not always be the case for whatever
+                    reason and we can help.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-darkc">
+              <h2 class="accordion-header" id="headingEight">
+                <button
+                  class="accordion-button atitle collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseEight"
+                  aria-expanded="false"
+                  aria-controls="collapseEight"
+                >
+                  <h2>
+                    Do you plan and arrange other functions besides weddings?
+                  </h2>
+                </button>
+              </h2>
+              <div
+                id="collapseEight"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingEight"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <p>
+                    The services of wedding planners are also frequently used in
+                    the planning of other social events such as anniversaries,
+                    engagement parties and other special occasions. We are happy
+                    to help with any function
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-darkc">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button atitle collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  <h2>When is a good time to start planning for my wedding?</h2>
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <p>
+                    Ideally you should begin planning for your wedding 8 to 12
+                    months ahead of the event. Popular wedding services, venues
+                    and suppliers require to be booked well in advance. However
+                    we recognize that this may not always be the case for
+                    whatever reason and we can help.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-darkc">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button atitle collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  <h2>How many weddings do you take up at a time?</h2>
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <p>
+                    As we are a boutique wedding planning company. Our focus is
+                    always on executing one wedding event at a time. We
+                    consciously try to avoid taking up wedding too close to each
+                    other just so that we can work to our full capability.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-darkc">
+              <h2 class="accordion-header" id="headingFour">
+                <button
+                  class="accordion-button atitle collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
+                >
+                  <h2>
+                    Will Shagun Events turn out to be an expensive decision?
+                  </h2>
+                </button>
+              </h2>
+              <div
+                id="collapseFour"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingFour"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <p>
+                    While we understand why you might think hiring a wedding
+                    planner might be an expensive affair, let us assure you
+                    that, on the contrary, a wedding planner will help you save
+                    money, time and effort. Our services could be easily trimmed
+                    to suit your budget, and presence in the wedding industry
+                    has given us the expertise to procure the best of offers for
+                    you.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-darkc">
+              <h2 class="accordion-header" id="headingFive">
+                <button
+                  class="accordion-button atitle collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive"
+                  aria-expanded="false"
+                  aria-controls="collapseFive"
+                >
+                  <h2>What is Shagun Events strength?</h2>
+                </button>
+              </h2>
+              <div
+                id="collapseFive"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingFive"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <p>
+                    Shagun Events have team who are highly skilled, efficient
+                    and most importantly dedicated to what we do. We sincerely
+                    believe that a wedding should be a delightful experience
+                    without any sense of worry for the couple as well as their
+                    families. Our ability to understand your requirements and
+                    executing them in a structured manner is what makes us
+                    different from other wedding planner. Our wedding calendar
+                    with regular targets and strict deadlines guarantee you the
+                    comfort that nothing is taken lightly and everything is
+                    achieved by the date. We believe that a positive
+                    relationship is essential for success and thus will aim at
+                    creating a good report between our client and us.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-darkc">
+              <h2 class="accordion-header" id="headingSix">
+                <button
+                  class="accordion-button atitle collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix"
+                  aria-expanded="false"
+                  aria-controls="collapseSix"
+                >
+                  <h2>How much do your wedding planning services cost?</h2>
+                </button>
+              </h2>
+              <div
+                id="collapseSix"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingSix"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <p>
+                    Wedding planners generally charge a management/service fee,
+                    which is typically a percentage of the total wedding budget
+                    and amount of work and is finalised after discussions with
+                    you. However there are costs savings you will receive from
+                    the special rate offered exclusively to us by our vendors
+                    and suppliers. Hiring us does not necessarily cost you more
+                    than your planned budget.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-        <div class="accordion   faq-body" id="accordionExample">
-  <div class="accordion-item  bg-darkc">
-    <h2 class="accordion-header  " id="headingOne">
-      <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        <h2> Accordion Item #1 </h2>
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-<p>Lorem ipsum dolor sit amet.</p>
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item bg-darkc">
-    <h2 class="accordion-header" id="headingTwo">
-      <button class="accordion-button atitle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        <h2>
-Accordion Item #2
-        </h2> 
-          
-         
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-<p>Lorem ipsum dolor sit amet.</p>
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item bg-darkc">
-    <h2 class="accordion-header" id="headingThree">
-      <button class="accordion-button atitle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-       <h2>
-Accordion Item #3
-       </h2> 
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-<p>Lorem ipsum dolor sit amet.</p>
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item bg-darkc">
-    <h2 class="accordion-header" id="headingFour">
-      <button class="accordion-button atitle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-       <h2>
-Accordion Item #4
-       </h2> 
-      </button>
-    </h2>
-    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-<p>Lorem ipsum dolor sit amet.</p>
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item bg-darkc">
-    <h2 class="accordion-header" id="headingFive">
-      <button class="accordion-button atitle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-      <h2>
- Accordion Item #5
-      </h2> 
-      </button>
-    </h2>
-    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-<p>Lorem ipsum dolor sit amet.</p>
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item bg-darkc">
-    <h2 class="accordion-header" id="headingSix">
-      <button class="accordion-button atitle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-       <h2>
-Accordion Item #6
-       </h2> 
-      </button>
-    </h2>
-    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-<p>Lorem ipsum dolor sit amet.</p>
-      </div>
-    </div>
-  </div>
-</div>
-      </div>
-    </div>
     </section>
     <!-- /////faq end///// -->
 
-
-          <!-- ////reveiw section starts/// -->
+    <!-- -----r2---- -->
     <section class="reveiw" id="reveiw">
       <div class="container">
-        <div class="row">
-
-      <div class="heading1">
-        <h1 class="rtitle">People's Reveiw </h1>
-        <img src="./images/header-img.png" alt="">
-      </div>
-
-        <div class="box-container">
-          <div class="box" data-aos="fade-right">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-              perspiciatis aut fugit ipsa repellat ipsam adipisci magni
-              obcaecati cupiditate vero.
-            </p>
-            <h3>Saish Gadekar</h3>
-            <span>june 12,2021</span>
-            <img src="./images/ashton-bingham-EQFtEzJGERg-unsplash.jpg" alt="" />
+        <div id="slider" class="owl-carousel">
+          <div class="content-area">
+            <div class="content">
+              <div class="img-area">
+                <img src="./images/IMG_20191118_183733_668.jpg" alt="p1" />
+              </div>
+              <h2>Saish Gadekar</h2>
+              <p>
+                I am very impressed by shagun events,i hired them for my event
+                and they performed their job beyond my expectations,their staff
+                was very helpful and very elegantly implemented the decorations
+                i was wishing for .If anyone is willing to give them a chance to
+                be their event planner they would definitely not regret it.Kudos
+                to shagun events.
+              </p>
+            </div>
+          </div>
+          <div class="content-area">
+            <div class="content">
+              <div class="img-area">
+                <img
+                  src="./images/brooke-cagle-kvKSL7B6eTo-unsplash.jpg"
+                  alt="p1"
+                />
+              </div>
+              <h2>Somesh Taywade</h2>
+              <p>
+                i wil refer everyone i know."its exactly what i have been
+                looking for,i wish i would have thought of it first.This is
+                simply unbelievable.i was amazed at the quality of wedding
+                planning"
+              </p>
+            </div>
+          </div>
+          <div class="content-area">
+            <div class="content">
+              <div class="img-area">
+                <img
+                  src="./images/christopher-campbell-rDEOVtE7vOs-unsplash.jpg"
+                  alt="p1"
+                />
+              </div>
+              <h2>Vaibhav Paithankar</h2>
+              <p>
+                We were clueless of everything,through shagun events we found
+                the best venue and Photographers for the wedding event.Must try.
+              </p>
+            </div>
           </div>
 
-          <div class="box" data-aos="fade-up">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-              perspiciatis aut fugit ipsa repellat ipsam adipisci magni
-              obcaecati cupiditate vero.
-            </p>
-            <h3>Amruta Gadekar</h3>
-            <span>may 18,2021</span>
-            <img src="./images/brooke-cagle-kvKSL7B6eTo-unsplash.jpg" alt="" />
+          <div class="content-area">
+            <div class="content">
+              <div class="img-area">
+                <img
+                  src="./images/ashton-bingham-EQFtEzJGERg-unsplash.jpg"
+                  alt="p1"
+                />
+              </div>
+              <h2>Nayan Barahate</h2>
+              <p>
+                Thank you for giving us the best memory of a wedding , shagun
+                events provided us the best designs that fit our budget .The way
+                they implement clients wishes is very innovative,all the best
+                team shagun events
+              </p>
+            </div>
           </div>
-
-          <div class="box" data-aos="fade-left">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-              perspiciatis aut fugit ipsa repellat ipsam adipisci magni
-              obcaecati cupiditate vero.
-            </p>
-            <h3>Gauri Shelke</h3>
-            <span>feb 1,2021</span>
-            <img
-              src="./images/christopher-campbell-rDEOVtE7vOs-unsplash.jpg"
-              alt=""
-            />
+          <div class="content-area">
+            <div class="content">
+              <div class="img-area">
+                <img
+                  src="./images/ashton-bingham-EQFtEzJGERg-unsplash.jpg"
+                  alt="p1"
+                />
+              </div>
+              <h2>Raghav Kolapalli</h2>
+              <p>
+                Thank you for giving us the best memory of a wedding , shagun
+                events provided us the best designs that fit our budget .The way
+                they implement clients wishes is very innovative,all the best
+                team shagun events
+              </p>
+            </div>
+          </div>
+          <div class="content-area">
+            <div class="content">
+              <div class="img-area">
+                <img
+                  src="./images/ashton-bingham-EQFtEzJGERg-unsplash.jpg"
+                  alt="p1"
+                />
+              </div>
+              <h2>Shatayu Sahare</h2>
+              <p>
+                Booked Photographer,makeup artist and decoraters from shagun
+                events for my sister's wedding.shagun events made the wedding
+                planning journey super easy for us and the experience with the
+                vendors was great!,Highly recommened everyone to choose shagun
+                events while planning their events
+              </p>
+            </div>
           </div>
         </div>
-       </div>
       </div>
     </section>
-    <!-- //////reveiw section ends///// -->
-
-
-  
-
+    <!-- -----r2end------ -->
 
     <!-- /////previous clients//// -->
     <section class="clients" id="clients">
-
       <div class="container">
         <div class="row">
-
-       
-
-
-
-
-      <div class="heading1">
-        <h1>Our Previous Clients</h1>
-        <img src="images/header-img.png" alt="" />
-      </div>
-
-      <div class="row1">
-        <div class="box-container">
-          <div class="box">
-            <img src="images/AnaisEvents_WeddingDocumentaryPhoto-Simi-Aneil+-+046.jpg" alt="" />
-            <div class="info">
-              <h3>01. mark & alice</h3>
-              <p>
-                <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Eveniet illo aut repudiandae nihil
-                quidem perspiciatis natus placeat, inventore, vitae, quia totam
-                ad dolores velit. Cumque, alias ullam. Nihil, aperiam hic!
-                <i class="fas fa-quote-right"></i>
-              </p>
-            </div>
+          <div class="heading1">
+            <h1>Our Previous Clients</h1>
+            <h1 class="border-bottom2"></h1>
           </div>
-          <div class="box">
-            <img src="images/Shagun Events (42).png" alt="" />
-            <div class="info">
-              <h3>01. mark & alice</h3>
-              <p>
-                <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Eveniet illo aut repudiandae nihil
-                quidem perspiciatis natus placeat, inventore, vitae, quia totam
-                ad dolores velit. Cumque, alias ullam. Nihil, aperiam hic!
-                <i class="fas fa-quote-right"></i>
-              </p>
+
+          <div class="row1">
+            <div class="box-container">
+              <div class="box">
+                <img
+                  src="images/AnaisEvents_WeddingDocumentaryPhoto-Simi-Aneil+-+046.jpg"
+                  alt=""
+                />
+                <div class="info">
+                  <h3>01. mark & alice</h3>
+                  <p>
+                    <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Eveniet illo aut repudiandae
+                    nihil quidem perspiciatis natus placeat, inventore, vitae,
+                    quia totam ad dolores velit. Cumque, alias ullam. Nihil,
+                    aperiam hic!
+                    <i class="fas fa-quote-right"></i>
+                  </p>
+                </div>
+              </div>
+              <div class="box">
+                <img src="images/Shagun Events (42).png" alt="" />
+                <div class="info">
+                  <h3>01. mark & alice</h3>
+                  <p>
+                    <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Eveniet illo aut repudiandae
+                    nihil quidem perspiciatis natus placeat, inventore, vitae,
+                    quia totam ad dolores velit. Cumque, alias ullam. Nihil,
+                    aperiam hic!
+                    <i class="fas fa-quote-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <img src="images/divider.png" class="divider" alt="" />
+
+            <div class="box-container">
+              <div class="box">
+                <div class="info">
+                  <h3>01. mark & alice</h3>
+                  <p>
+                    <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Eveniet illo aut repudiandae
+                    nihil quidem perspiciatis natus placeat, inventore, vitae,
+                    quia totam ad dolores velit. Cumque, alias ullam. Nihil,
+                    aperiam hic!
+                    <i class="fas fa-quote-right"></i>
+                  </p>
+                </div>
+                <img src="images/Untitled design (42).png" alt="" />
+              </div>
+              <div class="box">
+                <div class="info">
+                  <h3>01. mark & alice</h3>
+                  <p>
+                    <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Eveniet illo aut repudiandae
+                    nihil quidem perspiciatis natus placeat, inventore, vitae,
+                    quia totam ad dolores velit. Cumque, alias ullam. Nihil,
+                    aperiam hic!
+                    <i class="fas fa-quote-right"></i>
+                  </p>
+                </div>
+                <img src="images/Untitled design (43).png" alt="" />
+              </div>
             </div>
           </div>
         </div>
-
-        <img src="images/divider.png" class="divider" alt="" />
-
-        <div class="box-container">
-          <div class="box">
-            <div class="info">
-              <h3>01. mark & alice</h3>
-              <p>
-                <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Eveniet illo aut repudiandae nihil
-                quidem perspiciatis natus placeat, inventore, vitae, quia totam
-                ad dolores velit. Cumque, alias ullam. Nihil, aperiam hic!
-                <i class="fas fa-quote-right"></i>
-              </p>
-            </div>
-            <img src="images/Untitled design (42).png" alt="" />
-          </div>
-          <div class="box">
-            <div class="info">
-              <h3>01. mark & alice</h3>
-              <p>
-                <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Eveniet illo aut repudiandae nihil
-                quidem perspiciatis natus placeat, inventore, vitae, quia totam
-                ad dolores velit. Cumque, alias ullam. Nihil, aperiam hic!
-                <i class="fas fa-quote-right"></i>
-              </p>
-            </div>
-            <img src="images/Untitled design (43).png" alt="" />
-          </div>
-        </div>
       </div>
-       </div>
-
-      </div>
-
     </section>
     <!-- ////client end////// -->
 
- <!-- //////footer////// -->
+    <!-- //////footer////// -->
 
-<div class="container-fluid">
-  <div class="row">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="footer-basic lineup">
+          <footer class="newfx">
+            <div class="logo">
+              <a class="navbar-brand" href="#"
+                ><img src="./images/1.png" class="logo-img" alt="Shagun Events"
+              /></a>
+            </div>
 
-  
-  <div class="footer-basic lineup">
-        <footer>
-
-
-
-           <div class="logo">
-             <a class="navbar-brand" href="#"
-              ><img
-                src="./images/Shagun Events Logo.png"
-                class="logo-img"
-                alt="Shagun Events"
-            /></a>
-          </div>
-        
-
-         
-
-           <div class="social">
-            <a href="https://www.facebook.com/"
-              ><i class="fab fa-facebook-f fa-5x l"></i
-            ></a>
-            <a href=""><i class="fab fa-twitter fa-5x l"></i></a>
-            <a href=""><i class="fab fa-instagram fa-5x l"></i></a>
-            <a href="https://github.com/saishgadekar58"
-              ><i class="fab fa-github fa-5x l"></i
-            ></a>
-             <a href="9067194769">
-              <i class="fab fa-whatsapp fa-5x l"></i>
-            </a>
-          </div>
+            <div class="add">
+              <h1 class="no"><i class="fas fa-phone-alt"></i> +917083799369</h1>
+              <a href="www.gmail.com"
+                ><i class="fas fa-envelope"></i>shagunevents.help@gmail.com</a
+              >
+              <h1>84,shilpa housing society,shesh nagar</h1>
+              <h1>manewada-besa,nagpur</h1>
+              <h1>440034</h1>
+            </div>
 
             <div class="links">
-
-            <ul class="list-inline">
+              <ul class="list-inline">
                 <li class="list-inline-item"><a href="#home">Home</a></li>
                 <li class="list-inline-item"><a href="#about">About Us</a></li>
-                <li class="list-inline-item"><a href="#vendor">Our Services</a></li>
+                <li class="list-inline-item">
+                  <a href="#vendor">Our Services</a>
+                </li>
                 <li class="list-inline-item"><a href="#clients">clients</a></li>
                 <li class="list-inline-item"><a href="#reveiw">Reveiws</a></li>
-            </ul>
-          </div>
-     
+              </ul>
+            </div>
+          </footer>
+          <div class="social">
+            <a href="https://www.facebook.com/"
+              ><i class="fab fa-facebook-f fa-4x l"></i
+            ></a>
+            <a href=""><i class="fab fa-instagram fa-4x l"></i></a>
 
-    <div class="address">
-       <div class="add">
-         <h1>+919067194769</h1>
-         <h1>plot no:91 rajiv nagar</h1>
-         <h1>somalwada,nagpur</h1>
+            <a href="9067194769">
+              <i class="fab fa-whatsapp fa-4x l"></i>
+            </a>
+          </div>
+          <br />
+          <p class="copyright">shagunevents © 2021</p>
+        </div>
       </div>
     </div>
-
-            
-
-
-       </footer>
-       <br>
-       <p class="copyright"> theeventsgallery © 2021</p>
-    </div>
-
-    </div>
-</div>
- <!-- /////footer end////// -->
-
-   
-
-
-
-    
-
-
-    <script src="https://kit.fontawesome.com/0b5eee6e32.js" crossorigin="anonymous"></script>
+    <!-- /////footer end////// -->
 
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      src="https://kit.fontawesome.com/0b5eee6e32.js"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
