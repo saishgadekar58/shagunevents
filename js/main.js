@@ -1,3 +1,4 @@
+//owlcarousel for reveiw
 $("#slider").owlCarousel({
   loop: true,
   margin: 15,
@@ -17,9 +18,7 @@ $("#slider").owlCarousel({
 });
 
 function hidelogo() {
-  // var x = document.getElementById("hide");
   var x = document.getElementById("hideme");
-  // x.style.display = "none";
   console.log("hi");
   if (x.style.display === "none") {
     x.style.display = "block";

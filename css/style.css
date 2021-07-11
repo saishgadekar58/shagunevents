@@ -151,7 +151,6 @@ nav .link-items li a:hover {
 
 /* ////////hero//////// */
 .heading {
-  /* text-align: center; */
   font-size: 5rem;
   font-weight: bolder;
   padding: 1rem;
@@ -171,25 +170,47 @@ nav .link-items li a:hover {
 .home {
   height: 75vh;
 }
+.img-div5 {
+  display: block;
+  margin: auto;
+}
+.img-div5 img {
+  height: 49rem;
+}
 
-/* .hero {
+.carousel-control-next,
+.carousel-control-prev {
+  position: absolute;
+  top: 200px;
+  bottom: auto;
+  z-index: 1;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin-bottom: 9rem;
-} */
+  width: 15%;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  background: 0 0;
+  border: 0;
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+}
+
 .carousel-control-prev-icon {
   margin-bottom: 35rem;
   color: var(--pink) !important;
   height: 65px;
-  opacity: 0.5;
-
+  opacity: 1;
+  z-index: 100;
   width: 65px;
 }
 .carousel-control-next-icon {
-  margin-bottom: 35rem;
+  /* margin-bottom: 35rem; */
   color: var(--pink) !important;
-  opacity: 0.5;
+  opacity: 1;
+  z-index: 100;
+
   height: 65px;
   width: 65px;
 }
@@ -576,7 +597,7 @@ footer {
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 0;
-  margin-top: 50px;
+  margin-top: 88px;
   color: #000;
 }
 
@@ -607,7 +628,8 @@ footer {
   text-align: center;
   padding-bottom: 15px;
   padding-top: 1rem;
-  margin-left: 88rem;
+  margin-top: 2rem;
+  margin-left: 82rem;
 }
 
 .footer-basic .social a {
@@ -741,6 +763,80 @@ footer .logo img {
 
 /* ----gallery-end */
 
+/* /////contact////// */
+
+.contact-form {
+  height: 100%;
+  width: 100%;
+  /* margin-top: 9rem; */
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+  /* margin-bottom: 9rem; */
+  background: url(../images/UscYpa.jpg) 100%;
+}
+
+.contact-form .title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+  display: block;
+}
+.contact-form .title h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+}
+.contact-form .title p {
+  font-size: 2rem;
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
+}
+#contact .mb-3 {
+  display: flex !important;
+  flex-direction: row;
+}
+#contact .mb-3 input {
+  width: 100%;
+  border: 1px solid black;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+
+  padding-right: 5px;
+  padding-left: 5px;
+}
+#contact .mb-3 label {
+  padding: 2rem;
+  font-size: 2rem;
+  /* margin-right: 0.5rem; */
+}
+
+#contact .mb-3 textarea {
+  border: 1px solid var(--black);
+  margin-right: 0.5rem;
+}
+.full button {
+  display: block;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  padding-left: 0px;
+  padding-right: 0px;
+  color: #fff;
+  background-color: var(--pink);
+}
+
+#contact {
+  border: 2px solid var(--black);
+  background-color: transparent;
+  width: fit-content;
+  margin: auto;
+}
+/* //////////contactend//// */
+
 /* //////media queries////// */
 
 @media (max-width: 767px) {
@@ -773,11 +869,12 @@ footer .logo img {
 
   .home {
     height: 40vh;
-    margin-bottom: -13rem;
+    margin-bottom: 10rem;
     padding-bottom: 0px;
   }
   .home .carousel-inner {
-    height: 600px;
+    height: 60vh;
+    margin-bottom: 2rem;
   }
   .carousel-control-prev-icon {
     margin-bottom: 5rem;
@@ -798,7 +895,7 @@ footer .logo img {
   .about-us {
     display: flex;
     flex-direction: column;
-    margin-top: -1.8rem;
+    margin-top: 20rem;
   }
   .about-us .img-div img {
     height: 45rem;
@@ -937,11 +1034,19 @@ footer .logo img {
 
   .footer-basic .social {
     /* border: 2px solid red; */
-    margin-left: 0rem;
+    margin-left: 0rem !important;
     padding-top: 2rem;
   }
+  .footer-basic .social a {
+    display: inline-block;
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-left: 0rem;
+    transition: color 250ms ease-in-out;
+    color: whitesmoke;
+  }
   .links .list-inline {
-    margin-left: -2.5rem;
+    margin-left: -2.5rem !important;
     padding-bottom: 2rem;
   }
   .add {
@@ -984,8 +1089,8 @@ footer .logo img {
     font-weight: bold;
   }
   .home {
-    height: 75vh;
-    margin-bottom: -8rem;
+    height: 75vh !important;
+    margin-bottom: -14rem;
   }
   .home .carousel-item {
     height: 1600px;
@@ -1127,13 +1232,20 @@ footer .logo img {
     color: var(--black);
     margin-bottom: 5px;
   }
+  .footer-basic .social {
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 1rem;
+    margin-left: 65rem;
+  }
   .lineup {
     box-shadow: 0 -5px 5px -5px rgb(0 0 0 / 90%);
     padding: 0rem 1rem;
   }
   footer .links .list-inline {
-    margin-left: -3rem;
-    margin-top: 3rem;
+    margin-left: -9rem;
+    margin-top: 9.5rem;
+    margin-bottom: 2rem;
   }
   .vendor .box-container .box {
     width: 100%;
@@ -1145,6 +1257,10 @@ footer .logo img {
 @media (max-width: 1200px) {
   html {
     font-size: 55%;
+  }
+  .home {
+    height: 50vh !important;
+    margin-bottom: -14rem;
   }
 }
 @media only screen and (min-width: 1200px) {
