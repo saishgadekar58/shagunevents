@@ -11,38 +11,25 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 // firebase.analytics();
 
-//reference messages collection
-var messagesRef = firebase.database().ref("messages");
-
+//firestore
+var firestore = firebase.firestore();
+const db = firestore.collection("userdata");
 //event listener for form
-document.getElementById("contact").addEventListener("submit", submitform);
-
-//submitting
-function submitform(e) {
+let submitbutton = document.getElementById("submit");
+submitbutton.addEventListener("click", (e) => {
   e.preventDefault();
   var name = document.getElementById("username").value;
-  var email = document.getElementById("useremail");
+  var email = document.getElementById("useremail").value;
   var phone = document.getElementById("userphone").value;
   var message = document.getElementById("usermessage").value;
-  console.log(name);
-  alert(name);
-  alert(email);
-  alert(phone);
-  console.log(email);
-  console.log(phone);
-  console.log(message);
-  //save msg
-  saveMessage(name, email, phone, message);
-  alert("Your respone has been saved");
-}
-
-// fnc to save msg
-function saveMessage(name, email, phone, message) {
-  var newMessageRef = messagesRef.push();
-  newMessageRef.set({
-    name: name,
-    email: email,
-    phone: phone,
-    message: message,
+  db.doc().set({
+    name,
+    email,
+    phone,
+    message,
   });
-}
+
+  document.getElementById("contact").reset();
+
+  alert("Your respone has been saved");
+});
