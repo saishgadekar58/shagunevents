@@ -19,7 +19,6 @@ $("#slider").owlCarousel({
 
 function hidelogo() {
   var x = document.getElementById("hideme");
-  console.log("hi");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {

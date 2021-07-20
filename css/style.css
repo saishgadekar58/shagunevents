@@ -476,7 +476,7 @@ nav .link-items li a:hover {
 
 .accordion-button h2 {
   width: 100%;
-  text-align: center;
+  text-align: start;
 }
 
 .accordion-button[aria-expanded="true"] {
@@ -648,7 +648,7 @@ footer .logo img {
   margin-bottom: 5rem;
 }
 .gallery .box-container .box img {
-  height: 85%;
+  height: 100%;
   width: 100%;
   object-fit: cover;
 }
@@ -996,6 +996,76 @@ footer .logo img {
     overflow: hidden;
     margin-bottom: -25rem;
     padding-bottom: -5rem;
+  }
+  .contact-form {
+    height: 100%;
+    width: 100%;
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+    background: url(../images/UscYpa.jpg) 100%;
+  }
+
+  .contact-form .title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    display: block;
+  }
+  .contact-form .title h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+  }
+  .contact-form .title p {
+    font-size: 2rem;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+  }
+  #contact .mb-3 {
+    display: flex !important;
+    flex-direction: row;
+  }
+  #contact .mb-3 input {
+    width: 75%;
+    border: 1px solid black;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 2.7rem;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  #contact .mb-3 label {
+    padding: 2rem;
+    font-size: 2rem;
+    /* margin-right: 0.5rem; */
+  }
+
+  #contact .mb-3 textarea {
+    border: 1px solid var(--black);
+    /* margin-right: 0.5rem; */
+    font-size: 2.2rem;
+    width: 50%;
+  }
+  .full button {
+    display: block;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    padding-left: 0px;
+    padding-right: 0px;
+    color: #fff;
+    background-color: var(--pink);
+  }
+
+  #contact {
+    border: 2px solid var(--black);
+    background-color: transparent;
+    width: fit-content;
+    margin: auto;
   }
 }
 @media (max-width: 450px) {

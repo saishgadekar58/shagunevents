@@ -22,14 +22,28 @@ submitbutton.addEventListener("click", (e) => {
   var email = document.getElementById("useremail").value;
   var phone = document.getElementById("userphone").value;
   var message = document.getElementById("usermessage").value;
+  var date = new Date().getDate();
+  var month = parseInt(new Date().getMonth()) + 1;
+  var year = new Date().getFullYear();
+  var time = date + "/" + month + "/" + year;
   db.doc().set({
     name,
     email,
     phone,
     message,
+    time,
   });
 
   document.getElementById("contact").reset();
 
   alert("Your respone has been saved");
 });
+
+function hidelogo() {
+  var x = document.getElementById("hideme");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
