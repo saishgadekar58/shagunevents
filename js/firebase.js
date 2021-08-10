@@ -7,43 +7,31 @@ var firebaseConfig = {
   appId: "1:766408420562:web:97e9dd54e1c0667f23d10b",
   measurementId: "G-F4RYQL6H8Z",
 };
-// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-// firebase.analytics();
-
-//firestore
 var firestore = firebase.firestore();
 const db = firestore.collection("userdata");
-//event listener for form
 let submitbutton = document.getElementById("submit");
+function hidelogo() {
+  var e = document.getElementById("hideme");
+  "none" === e.style.display
+    ? (e.style.display = "block")
+    : (e.style.display = "none");
+}
 submitbutton.addEventListener("click", (e) => {
   e.preventDefault();
-  var name = document.getElementById("username").value;
-  var email = document.getElementById("useremail").value;
-  var phone = document.getElementById("userphone").value;
-  var message = document.getElementById("usermessage").value;
-  var date = new Date().getDate();
-  var month = parseInt(new Date().getMonth()) + 1;
-  var year = new Date().getFullYear();
-  var time = date + "/" + month + "/" + year;
-  db.doc().set({
-    name,
-    email,
-    phone,
-    message,
-    time,
-  });
-
-  document.getElementById("contact").reset();
-
-  alert("Your respone has been saved");
+  var t = document.getElementById("username").value,
+    n = document.getElementById("useremail").value,
+    a = document.getElementById("userphone").value,
+    s = document.getElementById("usermessage").value,
+    o =
+      new Date().getDate() +
+      "/" +
+      (parseInt(new Date().getMonth()) + 1) +
+      "/" +
+      new Date().getFullYear();
+  t && a
+    ? (db.doc().set({ name: t, email: n, phone: a, message: s, time: o }),
+      document.getElementById("contact").reset(),
+      alert("Your respone has been saved"))
+    : alert("please enter your details before submitting");
 });
-
-function hidelogo() {
-  var x = document.getElementById("hideme");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
