@@ -853,8 +853,9 @@ footer .logo img {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.9);
     height: 80rem;
     overflow: hidden;
-    margin-bottom: -25rem;
+    margin-bottom: 1rem;
   }
+
   .contact-form {
     height: 100%;
     width: 100%;
