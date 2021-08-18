@@ -1,3 +1,3 @@
 # website of shagun events
-https://saishgadekar58.github.io/shagunevents/
+www.shagunevents.co.in
 click on the link to visit site
